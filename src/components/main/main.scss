@@ -1,0 +1,32 @@
+.main{
+    flex: 3;
+    background: linear-gradient(#0c0c42b4 ,#0c0c42d7), url('../../assets/Screenshot_20230311-141514.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main-top{
+    margin-top: 300px;
+}
+.main-row{
+    height: 100px;
+    width: 100px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    background: #0c0c42;
+}
+.main-time{
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'nunitoBold';
+}

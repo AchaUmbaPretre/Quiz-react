@@ -1,0 +1,29 @@
+.rightbar{
+    flex: 1;
+    background: #020230;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.rightLi{
+    font-size: 1.2rem;
+    display: flex;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: #0c0c42;
+}
+.rightLi.active{
+    background: teal;
+}
+.numero{
+    display: block;
+    width: 100px;
+}
