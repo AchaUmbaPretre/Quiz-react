@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import Main from '../../components/main/Main'
 import Rightbar from '../../components/rightbar/Rightbar'
-import './home.scss'
+import './home.css'
 
 const Home = () => {
-  const [questionNumber, setQuestionNumber] = useState(2);
+  const [questionNumber, setQuestionNumber] = useState(1);
   return (
     <>
         <div className="home">

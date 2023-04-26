@@ -1,9 +1,12 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react';
+import { EarnedContext } from '../../context/context';
+import Timer from '../timer/Timer';
 import Trivia from '../trivia/Trivia'
-import './main.scss'
+import './main.css'
 
 const Main = ({questionNumber, setQuestionNumber}) => {
-  const [stop, setStop] = useState(false)
+  const [stop, setStop] = useState(false);
+  const {earned, setEarned} = useContext(EarnedContext);
 
     const reponses = [
       {
@@ -52,20 +55,23 @@ const Main = ({questionNumber, setQuestionNumber}) => {
         ]
       }]
 
-
   return (
     <>
       <div className="main">
         <div className="main-container">
+        {stop ? (<h1 className="main-earned">You  earned : $ {earned} </h1>) : (
+        <>
           <div className="main-top">
               <div className="main-row">
-                <span className="main-time">10</span>
-              </div>
+                <span className="main-time"><Timer setStop={setStop} questionNumber={questionNumber} /></span>
+              </div> 
           </div>
           <div className="main-bottom">
               <Trivia reponses={reponses} setStop={setStop} questionNumber={questionNumber} setQuestionNumber={setQuestionNumber}/>
           </div>
-        </div>
+        </>)}
+        </div> 
+          
       </div>
     </>
   )
